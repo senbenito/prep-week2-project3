@@ -21,17 +21,23 @@ document.getElementById("q0").classList.add("status-good");
 // 1. Output each item in the following Array to your console within their own paragraphs:
 var livingRoom = ['couch', 'lamp', 'rug', 'shelf'];
 
-
+for (var i=0; i<livingRoom.length;i++) {
+  console.log(livingRoom[i]);
+};
 
 
 // 2. Using a loop, log numbers 22-33 within their own paragraphs.
-
+ for (var i=22; i<33; i++) {
+   console.log(i);
+ }
 
 
 
 
 // 3. Using a similar loop, log numbers 75 to 100, only in increments of five.
-
+for (var i=75; i<=100; i+=5) {
+  console.log(i);
+}
 
 
 
@@ -178,11 +184,11 @@ var largestNum = [-5, -2, -6, 0, -1]
 
 /* SANDBOX TRACK
 
-Solving all of these problems is a great step in the right direction, 
-but the next step is coming up with your own arrangements to solve 
+Solving all of these problems is a great step in the right direction,
+but the next step is coming up with your own arrangements to solve
 new problems. Practice creating your own problems to solve and their solutions -
-you can even challenge your classmates! 
- 
-Also, consider how you can add/remove CSS styles to create added presentation with the results. 
+you can even challenge your classmates!
+
+Also, consider how you can add/remove CSS styles to create added presentation with the results.
 
 */
