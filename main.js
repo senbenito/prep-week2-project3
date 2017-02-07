@@ -25,27 +25,37 @@ for (var i=0; i<livingRoom.length;i++) {
   console.log(livingRoom[i]);
 };
 
+document.getElementById('q1').innerHTML = "for (var i=0; i<livingRoom.length;i++) / livingRoom[i]";
+
 
 // 2. Using a loop, log numbers 22-33 within their own paragraphs.
- for (var i=22; i<33; i++) {
+ for (var i=22; i<=33; i++) {
    console.log(i);
- }
+ };
 
+ document.getElementById('q2').innerHTML = "for (var i=22; i<=33; i++) / i";
 
 
 
 // 3. Using a similar loop, log numbers 75 to 100, only in increments of five.
+
 for (var i=75; i<=100; i+=5) {
   console.log(i);
-}
+};
+document.getElementById('q3').innerHTML = "for (var i=75; i<=100; i+=5) / i";
 
 
 
 
 // 4. Write a while loop that displays paragraphs of "This is how a professional loops." to the HTML page 5 times.
+var loops=1;
 
-
-
+while (loops<=5) {
+  loops++;
+  var loopsMessage='<p>This is how a professional loops.</p>';
+  console.log(loopsMessage)
+};
+document.getElementById('q4').innerHTML = loopsMessage;
 
 
 
@@ -53,16 +63,31 @@ for (var i=75; i<=100; i+=5) {
 //     Display in unique paragraphs the sentence "At home, I have _____ cats."
 //     The numbers should range from 10 to 110, in increments of 25.
 
+for (x=10;x<=110;x+=25){
+var forCats = x
+}
 
+var y = 10
+while (y<110){
+  y+=25;
+  var whileCats = y
+}
 
-
+document.getElementById('q5').innerHTML = '<p>At home, I have ' + forCats + ' cats.</p>' + '<p>At home, I have ' + whileCats + ' cats.</p>'
 
 // 6. Given the following Array, display in unique paragraphs'Even' if the number is even, 'Even and greater than 10' if the
 //    number is even and greater than 10, and 'Odd' if the number is odd.
 //    HINT: Google 'remainder operator'
 var numArray = [2, 17, 9, 24, 8];
 
-
+for (i=0;i<numArray.length; i++){
+if (numArray[i] % 2 === 0 && numArray[i] <= 10){
+  document.getElementById('q6').innerHTML = numArray[i] + ': even.'}
+else if (numArray % 2 ===0) {
+  document.getElementById('q6').innerHTML = numArray[i] + ': even and greater than 10.'}
+ else {
+   document.getElementById('q6').innerHTML = numArray[i] + ': odd.'}
+}
 
 
 
