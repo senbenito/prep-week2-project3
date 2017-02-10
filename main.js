@@ -52,10 +52,10 @@ var loops=1;
 
 while (loops<=5) {
   loops++;
-  var loopsMessage='<p>This is how a professional loops.</p>';
-  console.log(loopsMessage)
+  document.getElementById('q4').innerHTML += '<p>This is how a professional loops.</p>';
+  console.log('This is how a professional loops.')
 };
-document.getElementById('q4').innerHTML = loopsMessage;
+
 
 
 
@@ -81,21 +81,29 @@ document.getElementById('q5').innerHTML = '<p>At home, I have ' + forCats + ' ca
 var numArray = [2, 17, 9, 24, 8];
 
 for (i=0;i<numArray.length; i++){
-if (numArray[i] % 2 === 0 && numArray[i] <= 10){
-  document.getElementById('q6').innerHTML = numArray[i] + ': even.'}
-else if (numArray % 2 ===0) {
-  document.getElementById('q6').innerHTML = numArray[i] + ': even and greater than 10.'}
- else {
-   document.getElementById('q6').innerHTML = numArray[i] + ': odd.'}
+  if (numArray[i] % 2 === 0 && numArray[i] <= 10){
+    // console.log("test 6", numArray[i]);
+    // var evenNumber = numArray[i] + ': even.'
+    document.getElementById('q6').innerHTML += '<p>' + numArray[i] + ': even.</p>'
+  }
+  else if (numArray[i] % 2 ===0) {
+    // var evenG10 = numArray[i] + ': even and greater than 10.'}
+    document.getElementById('q6').innerHTML += '<p>' + numArray[i] + ': even and greater than 10.</p>'
+  }
+  else {
+    document.getElementById('q6').innerHTML += '<p>' + numArray[i] + ': odd.'}
 }
-
+// document.getElementById('q6').innerHTML = '<p>evenNumber</p>' + <p>evenG10</p> + <p>oddNumber</p>
 
 
 // 7. Using the following Array, create variable called numThrees with the value [13, 23, 33, 43, 53, 63, 73]
 var numArray = [13, 15, 17, 23, 25, 27, 33, 35, 37, 43, 45, 47, 53, 55, 57, 63, 65, 67, 73, 75, 77];
 
-
-
+for (i=0; i<numArray.length; i+=3){
+  var numThrees = numArray.sort()[i];
+console.log(numThrees);
+document.getElementById('q7').innerHTML += '<p>' + numThrees + '</p>';
+}
 
 
 
@@ -109,9 +117,21 @@ var numArray = [13, 15, 17, 23, 25, 27, 33, 35, 37, 43, 45, 47, 53, 55, 57, 63, 
 // ######
 // #######
 
+// for (i=0;i<7;i++){
+//   var hashtags = ['#', '##','###','####','#####','######','#######'];
+// console.log(hashtags[i]);
+//   document.getElementById('q8').innerHTML += '<p>' + hashtags[i] + '</p>';
+// }
 
+//function expression:
+//var createArray = function(){
 
+//function declaration:
+//function createArray(){
 
+function hashtags(){
+
+}
 
 
 
