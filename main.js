@@ -21,26 +21,26 @@ document.getElementById("q0").classList.add("status-good");
 // 1. Output each item in the following Array to your console within their own paragraphs:
 var livingRoom = ['couch', 'lamp', 'rug', 'shelf'];
 
-for (var i=0; i<livingRoom.length;i++) {
-  console.log(livingRoom[i]);
+for (var i = 0; i < livingRoom.length; i++) {
+    console.log(livingRoom[i]);
 };
 
 document.getElementById('q1').innerHTML = "for (var i=0; i<livingRoom.length;i++) / livingRoom[i]";
 
 
 // 2. Using a loop, log numbers 22-33 within their own paragraphs.
- for (var i=22; i<=33; i++) {
-   console.log(i);
- };
+for (var i = 22; i <= 33; i++) {
+    console.log(i);
+};
 
- document.getElementById('q2').innerHTML = "for (var i=22; i<=33; i++) / i";
+document.getElementById('q2').innerHTML = "for (var i=22; i<=33; i++) / i";
 
 
 
 // 3. Using a similar loop, log numbers 75 to 100, only in increments of five.
 
-for (var i=75; i<=100; i+=5) {
-  console.log(i);
+for (var i = 75; i <= 100; i += 5) {
+    console.log(i);
 };
 document.getElementById('q3').innerHTML = "for (var i=75; i<=100; i+=5) / i";
 
@@ -48,12 +48,12 @@ document.getElementById('q3').innerHTML = "for (var i=75; i<=100; i+=5) / i";
 
 
 // 4. Write a while loop that displays paragraphs of "This is how a professional loops." to the HTML page 5 times.
-var loops=1;
+var loops = 1;
 
-while (loops<=5) {
-  loops++;
-  document.getElementById('q4').innerHTML += '<p>This is how a professional loops.</p>';
-  console.log('This is how a professional loops.')
+while (loops <= 5) {
+    loops++;
+    document.getElementById('q4').innerHTML += '<p>This is how a professional loops.</p>';
+    console.log('This is how a professional loops.')
 };
 
 
@@ -63,14 +63,14 @@ while (loops<=5) {
 //     Display in unique paragraphs the sentence "At home, I have _____ cats."
 //     The numbers should range from 10 to 110, in increments of 25.
 
-for (x=10;x<=110;x+=25){
-var forCats = x
+for (x = 10; x <= 110; x += 25) {
+    var forCats = x
 }
 
 var y = 10
-while (y<110){
-  y+=25;
-  var whileCats = y
+while (y < 110) {
+    y += 25;
+    var whileCats = y
 }
 
 document.getElementById('q5').innerHTML = '<p>At home, I have ' + forCats + ' cats.</p>' + '<p>At home, I have ' + whileCats + ' cats.</p>'
@@ -80,18 +80,17 @@ document.getElementById('q5').innerHTML = '<p>At home, I have ' + forCats + ' ca
 //    HINT: Google 'remainder operator'
 var numArray = [2, 17, 9, 24, 8];
 
-for (i=0;i<numArray.length; i++){
-  if (numArray[i] % 2 === 0 && numArray[i] <= 10){
-    // console.log("test 6", numArray[i]);
-    // var evenNumber = numArray[i] + ': even.'
-    document.getElementById('q6').innerHTML += '<p>' + numArray[i] + ': even.</p>'
-  }
-  else if (numArray[i] % 2 ===0) {
-    // var evenG10 = numArray[i] + ': even and greater than 10.'}
-    document.getElementById('q6').innerHTML += '<p>' + numArray[i] + ': even and greater than 10.</p>'
-  }
-  else {
-    document.getElementById('q6').innerHTML += '<p>' + numArray[i] + ': odd.'}
+for (i = 0; i < numArray.length; i++) {
+    if (numArray[i] % 2 === 0 && numArray[i] <= 10) {
+        // console.log("test 6", numArray[i]);
+        // var evenNumber = numArray[i] + ': even.'
+        document.getElementById('q6').innerHTML += '<p>' + numArray[i] + ': even.</p>'
+    } else if (numArray[i] % 2 === 0) {
+        // var evenG10 = numArray[i] + ': even and greater than 10.'}
+        document.getElementById('q6').innerHTML += '<p>' + numArray[i] + ': even and greater than 10.</p>'
+    } else {
+        document.getElementById('q6').innerHTML += '<p>' + numArray[i] + ': odd.'
+    }
 }
 // document.getElementById('q6').innerHTML = '<p>evenNumber</p>' + <p>evenG10</p> + <p>oddNumber</p>
 
@@ -99,10 +98,10 @@ for (i=0;i<numArray.length; i++){
 // 7. Using the following Array, create variable called numThrees with the value [13, 23, 33, 43, 53, 63, 73]
 var numArray = [13, 15, 17, 23, 25, 27, 33, 35, 37, 43, 45, 47, 53, 55, 57, 63, 65, 67, 73, 75, 77];
 
-for (i=0; i<numArray.length; i+=3){
-  var numThrees = numArray.sort()[i];
-console.log(numThrees);
-document.getElementById('q7').innerHTML += '<p>' + numThrees + '</p>';
+for (i = 0; i < numArray.length; i += 3) {
+    var numThrees = numArray.sort()[i];
+    console.log(numThrees);
+    document.getElementById('q7').innerHTML += '<p>' + numThrees + '</p>';
 }
 
 
@@ -123,15 +122,23 @@ document.getElementById('q7').innerHTML += '<p>' + numThrees + '</p>';
 //   document.getElementById('q8').innerHTML += '<p>' + hashtags[i] + '</p>';
 // }
 
+var hashtags = [];
+for (i = 0; i < 7; i++) {
+    hashtags.push('#');
+    document.getElementById('q8').innerHTML += '<p>' + hashtags.join('') + '</p>';
+    // console.log(i + ' hashtags: ' + hashtags);
+}
+
+
 //function expression:
 //var createArray = function(){
 
 //function declaration:
 //function createArray(){
 
-function hashtags(){
-
-}
+// function hashtags() {
+//
+// }
 
 
 
@@ -141,7 +148,18 @@ function hashtags(){
 // If the number is divisible by 5, print "Buzz" instead of the number.
 // If the number is divisible by both 3 and 5, print "FizzBuzz" instead of the number.
 
-
+for (var i = 1; i <= 100; i++) {
+    if (i % 3 === 0) {
+        console.log('Fizz');
+        document.getElementById('q9').innerHTML += '<p>' + 'Fizz' + '</p>';
+    } else if (i % 5 === 0) {
+        console.log('Buzz');
+        document.getElementById('q9').innerHTML += '<p>' + 'Buzz' + '</p>';
+    } else {
+        console.log(i);
+        document.getElementById('q9').innerHTML += '<p>' + i + '</p>'
+    }
+}
 
 
 
@@ -150,15 +168,70 @@ function hashtags(){
 // randomly choose. You will use an alert to define the winner.
 
 // 10. Use a variable called "human" to prompt the user to type their choice.
+var human = document.getElementById('humanText');
+
+human.addEventListener('input', confirmHuman);
+function confirmHuman() {
+  document.getElementById('q10').innerHTML = 'Hooray! You entered: ' + human.value;//muthafuckin' VALUE, son!!
+}
+
+
 // 11. Define a variable called "computer" and use Math.random to allow the computer to randomly select a number.
 //     For reference:
 //     Math.random gives you a random number between 0 and 1, which is different each time you call it.
+var computer = Math.random();
+document.getElementById('q11').innerHTML = `Computer's number: ${computer}`;
+
 // 12. Let's start our conditional statement.
 //     If the random computer number falls between 0 and .33, the computer is "rock"
 //     If the random computer number falls between .34 and .66, the computer is "paper"
 //     If the random computer number falls between .67 and 1, the computer is "scissors"
+
+var computerRSB = '';
+
+human.addEventListener('input', showComputer);
+function showComputer(){if (computer>=0 && computer<.33){
+  computerRSB = 'rock';
+} else if (computer>=.34 && computer<.66) {
+  computerRSB = 'paper';
+} else {
+  computerRSB = 'scissors'
+}
+document.getElementById('q12').innerHTML = `Computer Ro Sham Bo: ${computerRSB}`;
+}
+
+
 // 13. Using both "human" and the computer choice, begin another conditional statement to compare them.
 // 14. After comparing, determine who has won; the computer or the human!
+
+
+function whoWon() {if (computerRSB=='rock' && human.value=='paper'){ //don't forget that comparisons use ==, not =!!
+  document.getElementById('q14').innerHTML = 'Paper covers Rock: you win this time, human...'
+
+} else if (computerRSB=='paper' && human.value=='scissors') {
+    document.getElementById('q14').innerHTML = 'Scissors cut Paper: you win this time, human...'
+
+} else if (computerRSB=='scissors' && human.value=='rock') {
+  document.getElementById('q14').innerHTML = 'Rock smashes Scissors: you win this time, human...'
+
+} else if (computerRSB=='rock' && human.value=='scissors') {
+  document.getElementById('q14').innerHTML = 'Rock smashes Scissors: ROBOTS RULE, MEATBAG!!'
+
+} else if (computerRSB=='paper' && human.value=='rock') {
+  document.getElementById('q14').innerHTML = 'Paper covers Rock: ROBOTS RULE, MEATBAG!!'
+
+} else if (computerRSB=='scissors' && human.value=='paper') {
+   document.getElementById('q14').innerHTML = 'Scissors cut Paper: ROBOTS RULE, MEATBAG!!'
+
+ } else if (computerRSB==human.value) {
+   document.getElementById('q14').innerHTML = 'I see geniuses think alike...'
+
+ } else {
+   document.getElementById('q14').innerHTML = `I don't think you know how to play.`;
+
+ }
+};
+winnerIs.addEventListener('click', whoWon);
 // 15. Give yourself a high five for completing your first javascript game!
 // BONUS: What happens if your user enters something other than "rock", "paper", or "scissors?". Change your default case
 //     to print a snarky message to the console if the input doesn't match any of the options.
@@ -178,7 +251,7 @@ var largestNum = [-5, -2, -6, 0, -1]
 
 // HEADS OR TAILS?
 // 17. Use the following variable for your coin flip action:
-       var coin = Math.floor(Math.random() * 2);
+var coin = Math.floor(Math.random() * 2);
 //     We're using Math.random again, along with Math.floor.
 //     Remember, Math.random gives you a random number between 0 and 1.
 //     Calling Math.floor on that number will truncate the decimal, and give you a
