@@ -246,27 +246,51 @@ winnerIs.addEventListener('click', whoWon);
 // 16. Write a conditional statement to find the largest of the numbers in the array provided.
 var largestNum = [-5, -2, -6, 0, -1]
 
-
+function findLargest(Array){
+  result = 0;
+  for (var i=0; i<Array.length; i++){
+    if (Array[i]>result){
+      Array[i]=result;
+    } else {
+      i++;
+    }
+  }
+  return result;
+}
+document.getElementById('q16').innerHTML = `This is the largest number in the array [largestNum]: ${findLargest(largestNum)}`;
 
 
 // HEADS OR TAILS?
 // 17. Use the following variable for your coin flip action:
 var coin = Math.floor(Math.random() * 2);
+
 //     We're using Math.random again, along with Math.floor.
 //     Remember, Math.random gives you a random number between 0 and 1.
 //     Calling Math.floor on that number will truncate the decimal, and give you a
 //     random number within the bounds of your array. (In this case, our array will only contain two items.)
+var flip = '';
+function assignFlip(number){
+  if (number==1){
+    flip='heads';
+  } else {
+    flip='tails';
+  }
+  return flip;
+}
 
-
-
-
-
+document.getElementById('q17').innerHTML = `Here's the coin flip result: ${assignFlip(coin)}.`
 
 // 18. Use a do/while loop to keep flipping the coin until you get tails.
 
+var flipLoopResults = [];
+  var i=0;
+do {
+  coin = Math.floor(Math.random() * 2);
+  flipLoopResults[i] = assignFlip(coin);
+  i++;
+} while (flip=='heads');
 
-
-
+document.getElementById('q18').innerHTML = `Here are the coin flips required to result in tails: ${flipLoopResults.join(', ')}.`;
 
 
 // CHESS BOARD
